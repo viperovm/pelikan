@@ -1,0 +1,59 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar"
+         style="background-color:#3c7399!important;">
+        <div class="container">
+
+
+            <!-- Brand -->
+            <a class="navbar-brand waves-effect" href="{% url 'home' %}">
+                <strong>ПЕЛИКАН</strong><i class="fas fa-graduation-cap ml-2"></i>
+            </a>
+
+            <!-- Collapse -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <!-- Left -->
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item{% if request.path == '/' %} active{% endif %}">
+                        <a class="nav-link waves-effect" href="{% url 'home' %}">Главная
+                        </a>
+                    </li>
+                    <li class="nav-item{% if request.path == '/about/' %} active{% endif %}">
+                        <a class="nav-link waves-effect" href="{% url 'about' %}">Обо мне</a>
+                    </li>
+                    <li class="nav-item{% if request.path == '/review/' %} active{% endif %}">
+                        <a class="nav-link waves-effect" href="{% url 'review' %}">Отзывы</a>
+                    </li>
+                    <li class="nav-item{% if request.path == '/question/' %} active{% endif %}">
+                        <a class="nav-link waves-effect" href="{% url 'question' %}">Вопросы и ответы</a>
+                    </li>
+                    <li class="nav-item{% if 'blog' in request.path %} active{% endif %}">
+                        <a class="nav-link waves-effect" href="{% url 'blog' %}">Блог</a>
+                    </li>
+                    <li class="nav-item{% if request.path == '/price/' %} active{% endif %}">
+                        <a class="nav-link waves-effect" href="{% url 'price' %}">Прайс-лист</a>
+                    </li>
+                    <li class="nav-item{% if request.path == '/contact/' %} active{% endif %}">
+                        <a class="nav-link waves-effect" href="{% url 'contact' %}">Контакты</a>
+                    </li>
+
+                </ul>
+
+                <!-- Right -->
+                <ul class="navbar-nav nav-flex-icons">
+                    <li class="nav-item">
+                        <a href="#" class="btn btn-outline-white">
+                            <i class="fas fa-user"></i> Вход/регистрация
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>

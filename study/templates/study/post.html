@@ -1,0 +1,76 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block title %}
+    {{ block.super }} | {{ post.title }}
+{% endblock %}
+{% block content %}
+
+    <!--Section: Post-->
+    <section>
+
+        <div class="row">
+            <div class="col-md-12 mb-4">
+                <div class="card mb-4 justify-content-center align-items-center"
+                     style="color: #fff; min-height: 50vh; background-image: url('{{ post.image.url }}'); background-size: cover;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-5">
+            <h2 class="h1">{{ post.title }}</h2>
+            <!--Section description-->
+            <p class="grey-text">{{ post.created_at }}</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 mb-4">
+                <div class="card mb-4">
+
+                    <!--Card content-->
+                    <div class="card-body">
+
+                        <p>{{ post.content|safe|linebreaks }}</p>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 text-center wow fadeIn">
+
+                    <div class="card-header">Do you want to get informed about new articles?</div>
+
+                    <!--Card content-->
+                    <div class="card-body">
+
+                        <!-- Default form login -->
+                        <form>
+
+                            <div class="md-form">
+                                <label for="defaultFormEmailEx" class="grey-text">Your email</label>
+                                <input type="email" id="defaultFormLoginEmailEx" class="form-control">
+                            </div>
+
+                            <!-- Default input password -->
+                            <div class="md-form">
+                                <label for="defaultFormNameEx" class="grey-text">Your name</label>
+                                <input type="text" id="defaultFormNameEx" class="form-control">
+                            </div>
+
+                            <div class="text-center mt-4">
+                                <button class="btn btn-info btn-md" type="submit">Sign up</button>
+                            </div>
+                        </form>
+                        <!-- Default form login -->
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!--Section: Post-->
+
+{% endblock content %}

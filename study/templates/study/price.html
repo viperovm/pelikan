@@ -1,0 +1,109 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block title %}
+{{ block.super }} | {{ title }}
+{% endblock %}
+{% block content %}
+
+            <!--Section: Post-->
+            <section>
+
+                <div class="row">
+                    <div class="col-md-12 mb-4">
+                        <div class="card mb-4 justify-content-center align-items-center"
+                             style="color: #fff; height: 300px; background-image: url('{% static 'img/main-6.jpg' %}'); background-size: cover;">
+
+                            <h2 class="h1 text-center mb-5">{{ title }}</h2>
+                            <!--Section description-->
+                            <p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                            <p class="text-center"> Quae, ut rerum deserunt corporis ducimus at
+                                <strong>400 000</strong> deleniti ea alias dolor reprehenderit sit vel.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 mb-4">
+                        <div class="card mb-4">
+                            <!--Table-->
+<table class="table table-hover table-fixed">
+
+  <!--Table head-->
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Surname</th>
+      <th>Country</th>
+      <th>City</th>
+      <th>Position</th>
+      <th>Age</th>
+    </tr>
+  </thead>
+  <!--Table head-->
+
+  <!--Table body-->
+  <tbody>
+    <tr>
+      <td>Jerry</td>
+      <td>Horwitz</td>
+      <td>Italy</td>
+      <td>Bari</td>
+      <td>Editor-in-chief</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <td>Janis</td>
+      <td>Joplin</td>
+      <td>Poland</td>
+      <td>Warsaw</td>
+      <td>Video Maker</td>
+      <td>39</td>
+    </tr>
+    <tr>
+      <td>Gary</td>
+      <td>Winogrand</td>
+      <td>Germany</td>
+      <td>Berlin</td>
+      <td>Photographer</td>
+      <td>37</td>
+    </tr>
+    <tr>
+      <td>Angie</td>
+      <td>Smith</td>
+      <td>USA</td>
+      <td>San Francisco</td>
+      <td>Teacher</td>
+      <td>52</td>
+    </tr>
+    <tr>
+      <td>John</td>
+      <td>Mattis</td>
+      <td>France</td>
+      <td>Paris</td>
+      <td>Actor</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <td>Otto</td>
+      <td>Morris</td>
+      <td>Germany</td>
+      <td>Munich</td>
+      <td>Singer</td>
+      <td>35</td>
+    </tr>
+  </tbody>
+  <!--Table body-->
+
+</table>
+<!--Table-->
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </section>
+            <!--Section: Post-->
+
+{% endblock content %}

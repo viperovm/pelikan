@@ -1,0 +1,112 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block title %}
+    {{ block.super }} | {{ title }}
+{% endblock %}
+{% block content %}
+
+    <!--Section: Post-->
+    <section>
+
+
+        <div class="row">
+            <div class="col-md-12 mb-4">
+                <div class="card mb-4 justify-content-center align-items-center"
+                     style="color: #fff; height: 300px; background-image: url('{% static 'img/main-5.jpg' %}'); background-size: cover;">
+
+                    <h2 class="h1 text-center mb-5">{{ title }}</h2>
+                    <!--Section description-->
+                    <p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    <p class="text-center"> Quae, ut rerum deserunt corporis ducimus at
+                        <strong>400 000</strong> deleniti ea alias dolor reprehenderit sit vel.</p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 mb-4">
+                <div class="card mb-4">
+
+                    <!--Card content-->
+                    <div class="card-body">
+
+                        <!--Grid row-->
+                        {% for post in posts %}
+
+                            <div class="row mt-3">
+
+                                <!--Image column-->
+                                <div class="col-lg-5 col-xl-4 mb-4">
+                                    <!--Featured image-->
+                                    <img class="rounded" src="{{ post.image.url }}" alt="Изображение поста" width="200">
+                                </div>
+                                <!--Grid column-->
+
+                                <!--Text column-->
+                                <div class="col-lg-7 col-xl-7 ml-xl-4 mb-4">
+                                    <h3 class="mb-3 font-weight-bold dark-grey-text">
+                                        <strong>{{ post.title }}</strong>
+                                    </h3>
+                                    <p class="grey-text">{{ post.excerpt }}</p>
+                                    <a href="{{ post.get_absolute_url }}"
+                                       class="btn btn-primary btn-md">Подробнее...
+                                    </a>
+                                </div>
+                                <!--Grid column-->
+
+                            </div>
+                            <!--Grid row-->
+
+                            <hr class="mb-5">
+                        {% endfor %}
+
+                        <!--Pagination-->
+
+                        {% include 'inc/_pagination.html' %}
+
+                        <!--Pagination-->
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 text-center wow fadeIn">
+
+                    <div class="card-header">Do you want to get informed about new articles?</div>
+
+                    <!--Card content-->
+                    <div class="card-body">
+
+                        <!-- Default form login -->
+                        <form>
+
+                            <div class="md-form">
+                                <label for="defaultFormEmailEx" class="grey-text">Your email</label>
+                                <input type="email" id="defaultFormLoginEmailEx" class="form-control">
+                            </div>
+
+                            <!-- Default input password -->
+                            <div class="md-form">
+                                <label for="defaultFormNameEx" class="grey-text">Your name</label>
+                                <input type="text" id="defaultFormNameEx" class="form-control">
+                            </div>
+
+                            <div class="text-center mt-4">
+                                <button class="btn btn-info btn-md" type="submit">Sign up</button>
+                            </div>
+                        </form>
+                        <!-- Default form login -->
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!--Section: Post-->
+
+
+{% endblock content %}

@@ -1,0 +1,100 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block title %}
+{{ block.super }} | {{ title }}
+{% endblock %}
+{% block content %}
+
+
+            <!--Section: Post-->
+            <section>
+
+
+                <div class="row">
+                    <div class="col-md-12 mb-4">
+                        <div class="card mb-4 justify-content-center align-items-center"
+                             style="color: #fff; height: 300px; background-image: url('{% static 'img/main-3.jpg' %}'); background-size: cover;">
+
+                            <h2 class="h1 text-center mb-5">{{ title }}</h2>
+                            <!--Section description-->
+                            <p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                            <p class="text-center"> Quae, ut rerum deserunt corporis ducimus at
+                                <strong>400 000</strong> deleniti ea alias dolor reprehenderit sit vel.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-8 mb-4">
+                        <div class="card mb-4">
+
+                            <!--Card content-->
+                            <div class="card-body">
+
+                                <!--Grid row-->
+                                {% for item in items %}
+                                <div class="row">
+
+                                    <div class="media d-block d-md-flex mt-4">
+                                        <div class="media-body text-center text-md-left ml-md-3 ml-0">
+                                            <h6 class="mt-0 font-weight-bold dark-grey-text">{{ item.name }}:
+                                            </h6>
+                                            <span class="dark-grey-text font-italic"><i class="fas fa-quote-left pr-2"></i>{{ item.content }}</span>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                    <hr>
+                                {% endfor %}
+
+                                <!--Grid row-->
+
+                                <!--Pagination-->
+                                {% include 'inc/_pagination.html' %}
+                                <!--Pagination-->
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 text-center">
+
+                            <div class="card-header">Отзывы могут оставлять только зарегистрированные пользователи
+                            </div>
+
+                        </div>
+                        <div class="card mb-4 text-center">
+
+                            <div class="card-header">Оставьте свой отзыв
+                            </div>
+
+                            <!--Card content-->
+                            <div class="card-body">
+
+                                <!-- Default form login -->
+                                <form>
+
+                                    <div class="md-form">
+                                        <label for="defaultFormTextEx" class="grey-text">Текст отзыва</label>
+                                        <textarea id="defaultFormTextEx" class="md-textarea form-control"></textarea>
+                                    </div>
+
+                                    <div class="text-center mt-4">
+                                        <button class="btn btn-info btn-md" type="submit">Отправить</button>
+                                    </div>
+                                </form>
+                                <!-- Default form login -->
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <!--Section: Post-->
+
+{% endblock content %}

@@ -1,0 +1,103 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block title %}
+{{ block.super }} | {{ title }}
+{% endblock %}
+{% block content %}
+
+            <!--Section: Post-->
+            <section>
+
+                <div class="row">
+                    <div class="col-md-12 mb-4">
+                        <div class="card mb-4 justify-content-center align-items-center"
+                             style="color: #fff; height: 300px; background-image: url('{% static 'img/main-2.jpg' %}'); background-size: cover;">
+
+                            <h2 class="h1 text-center mb-5">{{ title }}</h2>
+                            <!--Section description-->
+                            <p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                            <p class="text-center"> Quae, ut rerum deserunt corporis ducimus at
+                                <strong>400 000</strong> deleniti ea alias dolor reprehenderit sit vel.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row h-100 align-items-stretch">
+                    <div class="col-md-4 mb-5">
+                        <div class="card h-100"
+                             style="flex-flow: row wrap; min-height:350px; background-image: url('{% static 'img/avatar.jpg' %}'); background-position: center; background-size: cover;">
+                        </div>
+                    </div>
+                    <div class="col-md-8 mb-5">
+                        <div class="card h-100" style="flex-flow: row wrap;">
+
+                            <!--Card content-->
+                            <div class="card-body">
+
+                                <p class="h5 my-4">That's a very long heading </p>
+
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, ut rerum deserunt
+                                    corporis
+                                    ducimus at, deleniti ea alias dolor reprehenderit sit vel. Incidunt id illum
+                                    doloribus,
+                                    consequuntur maiores sed eligendi.</p>
+
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, ut rerum deserunt
+                                    corporis
+                                    ducimus at, deleniti ea alias dolor reprehenderit sit vel. Incidunt id illum
+                                    doloribus,
+                                    consequuntur maiores sed eligendi.</p>
+
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, ut rerum deserunt
+                                    corporis
+                                    ducimus at, deleniti ea alias dolor reprehenderit sit vel. Incidunt id illum
+                                    doloribus,
+                                    consequuntur maiores sed eligendi.</p>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mb-4">
+                        <div class="card pt-4">
+
+                            <div class="counter">
+                                <div class="row">
+                                    <div class="col-6 col-lg-3">
+                                        <div class="count-data text-center">
+                                            <h6 class="count h2" data-to="500" data-speed="500">500</h6>
+                                            <p class="m-0px font-w-600">Happy Clients</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-lg-3">
+                                        <div class="count-data text-center">
+                                            <h6 class="count h2" data-to="150" data-speed="150">150</h6>
+                                            <p class="m-0px font-w-600">Project Completed</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-lg-3">
+                                        <div class="count-data text-center">
+                                            <h6 class="count h2" data-to="850" data-speed="850">850</h6>
+                                            <p class="m-0px font-w-600">Photo Capture</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-lg-3">
+                                        <div class="count-data text-center">
+                                            <h6 class="count h2" data-to="190" data-speed="190">190</h6>
+                                            <p class="m-0px font-w-600">Telephonic Talk</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <!--Section: Post-->
+
+{% endblock content %}
